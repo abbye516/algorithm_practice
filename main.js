@@ -391,6 +391,7 @@ function isSubsequence(str1, str2) {
 isSubsequence('hello', ' world')
 */
 //#7 finding max sum of a sub array in an array
+/*
 function maxSubarraySum(arr, maxNum) {
     if (arr.length < maxNum) {
         return null
@@ -412,3 +413,79 @@ function maxSubarraySum(arr, maxNum) {
     return maxSum
 }
 maxSubarraySum([1,4,2,10,23,3,1,0,20], 4)
+*/
+
+/////Bootcamp algorithm practice///////
+
+//#1 print num of stars
+/*
+function printStart(num){
+    for (let i = 1; i < num; i++){
+       console.log("*".repeat(i))
+    }
+}
+printStart(5)
+*/
+
+//#2 print num stars descedning order
+// function printStarsBackwards(num){
+//     for (let i = num; i <= num; i--)
+//         console.log("*".repeat(i))
+// }
+// printStarsBackwards(5)
+/*
+function printStars(num) {
+    for (let i = 1; i <= num; i++) {
+        let str = "";
+        for (let j = 1; j <= i; j++) {
+            str += "*"
+        }
+        console.log(str)
+    }
+}
+printStars(4)
+*/
+//works 
+/*
+function starsBackwards(num) {
+    for (let i = 0; i <= num; i++) {
+        let str = "";
+        for (let j = num; j >i; j--) {
+            str += "*"
+        }
+        console.log(str)
+    }
+}
+starsBackwards(5)
+*/
+// function starsBackwards(num) {
+//     for (let i = 0; i <= num; i++) {
+//         let str = 0;
+//         for (let j = num; j >i; j--) {
+//             str += 1
+//         }
+//         console.log(str)
+//     }
+// }
+// starsBackwards(5)
+
+//ex: 3 This function should continue to print the stars normally 
+//then backwards for as many times as count
+
+function printStarSeries(numStars, reps) {
+    for (let i = 0; i < reps; i++) {
+        let str = ""
+        for (let i = 0; i < numStars; i++) {
+            str += "*"
+            console.log(str)
+        }
+        for (let i = 0; i <= numStars; i++) {
+            let str = "";
+            for (let j = numStars + 1; j > i; j--) {
+                str += "*"
+            }
+            console.log(str)
+        }
+    }
+}
+printStarSeries(5, 3)
