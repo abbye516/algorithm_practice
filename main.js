@@ -471,7 +471,7 @@ starsBackwards(5)
 
 //ex: 3 This function should continue to print the stars normally 
 //then backwards for as many times as count
-
+/*
 function printStarSeries(numStars, reps) {
     for (let i = 0; i < reps; i++) {
         let str = ""
@@ -489,3 +489,103 @@ function printStarSeries(numStars, reps) {
     }
 }
 printStarSeries(5, 3)
+*/
+
+//Ex: 4 Write some code that takes a string and reverses it
+/*
+const reverse = function (str) {
+    let reversed = ""
+    for (let i = 0; i < str.length; i++) {
+        reversed = str[i] + reversed
+    }
+    console.log(reversed)
+    return reversed
+
+}
+//   reverse("dog") //should return "god"
+reverse("hi") //should return "rac ecar"
+*/
+
+//#5 check if string is a palindrome
+/*
+function isPalindrome(str) {
+    let reversed = ""
+    for (let letter in str) {
+        reversed = str[letter] + reversed
+    }
+    reversed = reversed.toLowerCase()
+    if (str === reversed) {
+        console.log("true")
+        return true
+    }
+    else {
+        console.log("false")
+        return false
+    }
+}
+isPalindrome("Taco Cat")
+*/
+
+//#6 Write a function called encrypt that receives a string and encrypts it by shifting every letter in the string by one to the right (in the English alphabet).
+/*
+function encrypt(str) {
+    // str.toLowerCase()
+    let encrypted = ""
+    for (let i in str) {
+        let newLetter = String.fromCharCode(str[i].charCodeAt(0) + 1)
+        encrypted = encrypted + newLetter
+    }
+    console.log(encrypted)
+}
+encrypt("cAt")
+*/
+
+//#7 decrypt an encrypted string
+/*
+function decrypt(str) {
+    // str.toLowerCase()
+    let decrypted = ""
+    for (let i in str) {
+        let newLetter = String.fromCharCode(str[i].charCodeAt(0) - 1)
+        decrypted = decrypted + newLetter
+    }
+    console.log(decrypted)
+}
+
+decrypt("dbu")
+*/
+
+//EX: 8  Write a function called jumble that receives two arrays, and
+ //returns a third that is a jumbled form of the first two:
+ /*
+ const colors = ["red", "indigo", "white", "teal", "yellow"];
+ const foods = ["bread", "cheese", "cucumber"];
+ 
+ const jumble = function (arr1, arr2) {
+    let jumbled = [arr1[Math.random()*arr1.length | 0] || arr2[Math.random()*arr2.length | 0] ]
+    let random1 = arr1[Math.random()*arr1.length | 0]
+    let random2 = arr2[Math.random()*arr2.length | 0]
+    for(let i of jumbled){
+        if(i !== random1 && i !== random2){
+            jumbled.push(random1, random2)
+        }
+    }
+    console.log(jumbled)
+    // console.log(random1, random2)
+}
+ 
+ jumble(colors,foods)
+ */
+
+ //Ex: 9 
+ //Write a function getLetter such that there is a 60% chance of getting A, 10% chance of getting B, etc.
+//  const rawDist = {
+//     A: 60,
+//     B: 10,
+//     C: 10,
+//     D: 20
+// }
+// console.log()
+
+//udemy course:
+                            /////////RECURSION/////////// 
